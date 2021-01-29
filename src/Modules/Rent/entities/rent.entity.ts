@@ -1,6 +1,6 @@
-import { Clients } from "src/Modules/Clients/entities/clients.entity";
-import { Employees } from "src/Modules/Employees/entities/employees.entity";
-import { Vehicle } from "src/Modules/Vehicle/entities/vehicle.entity";
+import { Clients } from "src/Modules/Clients/client/entities/clients.entity";
+import { Employees } from "src/Modules/Employees/Employee/entities/employees.entity";
+import { Vehicle } from "src/Modules/Vehicle/vehicle/entities/vehicle.entity";
 import { Inspection } from "src/Modules/Inspection/entities/inspection.entity";
 import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
