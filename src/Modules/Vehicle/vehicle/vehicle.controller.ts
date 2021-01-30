@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { VehicleDto } from './dtos/vehicle.dto';
 import { VehicleService } from './vehicle.service';
 
@@ -24,5 +24,10 @@ export class VehicleController {
     @Put(':id')
     async updateVehicle(@Param('id') id: number, vehicle: VehicleDto) {
         return await this.vehicleService.updateVehicle(id, vehicle);
+    }
+
+    @Delete(':id')
+    async deleteVehicle(@Param('id') id: number){
+        return await this.vehicleService.deleteVehicle(id);
     }
 }

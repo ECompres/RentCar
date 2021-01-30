@@ -16,6 +16,10 @@ export class ClientsTypeService {
         return await this.clientsTypeRepository.find();
     }
 
+    async getClientType(id: number): Promise<ClientsType>{
+        return await this.clientsTypeRepository.findOne(id);
+    }
+
     async createClientType(clientType: ClientsTypeDto): Promise<ClientsType> {
         return await this.clientsTypeRepository.save(clientType);
     }

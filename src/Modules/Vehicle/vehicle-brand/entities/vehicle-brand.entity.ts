@@ -9,5 +9,6 @@ export class VehicleBrand {
     @Column()
     name: string;
 
-@Column()    state: boolean;
+    @Column()
+    state: boolean;
 }

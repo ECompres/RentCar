@@ -16,6 +16,10 @@ export class EmployeeTypeService {
         return await this.employeesRepository.find();
     }
 
+    async getEmployeeType(id: number): Promise<EmployeesType> { 
+        return await this.employeesRepository.findOne(id);
+    }
+
     async createEmployeeType(employeeType: EmployeeTypeDto): Promise<EmployeesType> {
         return await this.employeesRepository.save(employeeType);
     }
@@ -26,7 +30,7 @@ export class EmployeeTypeService {
         return await this.employeesRepository.save(editedEmployeeType);
     }
 
-    async deleteEmployeeType(id: number): Promise<any> { 
+    async deleteEmployeeType(id: number): Promise<any> {
         return await this.employeesRepository.delete(id);
     }
 }

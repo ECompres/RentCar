@@ -43,7 +43,8 @@ export class Rent {
     @Column()
     description: string;
 
-@Column()    state: boolean;
+    @Column() 
+    state: boolean;
 
     @Column()
     code: string;

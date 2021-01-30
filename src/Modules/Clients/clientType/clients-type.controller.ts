@@ -16,8 +16,13 @@ export class ClientsTypeController {
         return await this.clientsTypeService.getAllClientType();
     }
 
+    @Get(':id')
+    async getClientType(@Param('id') id: number) {
+        return await this.clientsTypeService.getClientType(id);
+    }
+
     @Post()
-    async createClientType(@Body() clientType: ClientsTypeDto   ) {
+    async createClientType(@Body() clientType: ClientsTypeDto) {
         return await this.clientsTypeService.createClientType(clientType);
     }
 

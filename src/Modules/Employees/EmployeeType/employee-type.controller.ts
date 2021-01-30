@@ -12,6 +12,11 @@ export class EmployeeTypeController {
         return await this.employeeTypeService.getAllEmployeeType();
     }
 
+    @Get(':id')
+    async getEmployeeType(@Param('id') id: number) {
+        return await this.employeeTypeService.getEmployeeType(id);
+    }
+    
     @Post()
     async createEmployeeType(@Body() employeeType: EmployeeTypeDto) {
         return await this.employeeTypeService.createEmployeeType(employeeType);
@@ -23,7 +28,7 @@ export class EmployeeTypeController {
     }
 
     @Delete(':id')
-    async deleteEmployeeType(@Param('id') id: number){
+    async deleteEmployeeType(@Param('id') id: number) {
         return await this.employeeTypeService.deleteEmployeeType(id);
     }
 }
